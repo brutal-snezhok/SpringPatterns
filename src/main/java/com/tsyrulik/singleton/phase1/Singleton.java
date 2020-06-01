@@ -1,6 +1,6 @@
-package com.tsyrulik.singleton.secondPhase;
+package com.tsyrulik.singleton.phase1;
 
-//does work in multithreading but has a bad performance
+// doesn't work correctly in multithreading
 public class Singleton {
     private static Singleton singleton;
 
@@ -8,7 +8,7 @@ public class Singleton {
 
     }
 
-    public synchronized static Singleton getInstance() {
+    public Singleton getInstance() {
         if(singleton == null) {
             singleton = new Singleton();
         }
